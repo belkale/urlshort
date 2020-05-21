@@ -45,7 +45,6 @@ type pathMap struct {
 // See MapHandler to create a similar http.HandlerFunc via
 // a mapping of paths to urls.
 func YAMLHandler(yml []byte, fallback http.Handler) (http.HandlerFunc, error) {
-	// TODO: Implement this...
 	var pathMaps []pathMap
 	err := yaml.Unmarshal(yml, &pathMaps)
 	if err != nil {

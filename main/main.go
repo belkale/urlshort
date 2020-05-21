@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"html"
 	"net/http"
 
 	"github.com/gophercises/urlshort"
@@ -41,5 +40,5 @@ func defaultMux() *http.ServeMux {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, " + html.EscapeString(r.URL.Path))
+	fmt.Fprintln(w, "Hello World!")
 }
