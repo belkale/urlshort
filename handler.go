@@ -1,9 +1,9 @@
 package urlshort
 
 import (
+	yaml "gopkg.in/yaml.v2"
 	"html"
 	"net/http"
-	yaml "gopkg.in/yaml.v2"
 )
 
 // MapHandler will return an http.HandlerFunc (which also
@@ -25,7 +25,7 @@ func MapHandler(pathsToUrls map[string]string, fallback http.Handler) http.Handl
 
 type pathMap struct {
 	Path string
-  URL string
+	URL  string
 }
 
 // YAMLHandler will parse the provided YAML and then return
